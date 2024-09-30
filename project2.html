@@ -115,7 +115,7 @@
             }
 
             const forecastDiv = document.getElementById('forecast');
-            forecastDiv.innerHTML = '<p>Loading...</p>'; // Loading state
+            forecastDiv.innerHTML = '<p>Loading...</p>';
 
             const forecastUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${place}&appid=${apiKey}&units=metric`;
 
@@ -127,7 +127,7 @@
                     return response.json();
                 })
                 .then(data => {
-                    forecastDiv.innerHTML = ''; // Clear loading message
+                    forecastDiv.innerHTML = '';
 
                     const now = new Date();
                     const today = now.toISOString().split('T')[0];
